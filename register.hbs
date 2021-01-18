@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <title>Document</title>
+    
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <style>
+body{
+background-image: "https://images.pexels.com/photos/2811648/pexels-photo-2811648.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500";
+}
+    </style>
+  </head>
+  <body >
+   <nav class="navbar navbar-light bg-light ">
+     <h4 ><b>WEBSITE</b></h4>
+     <ul class="navbar-nav  ml-auto kl">
+       <li class="li px-4"><a href="/"><b><i class="fas fa-house-fill">Home</i></b></a></li>
+       <li class="li px-4"><a href="/login"><b><i class="fas fa-lock-fill">Login</i></b></a></li>
+       <li class="li px-4"><a href="/register"><b><i class="fas fa-person-fill">Register</i></b></a></li>
+     </ul>
+   </nav>
+   <div class="container mt-15">
+     <div class="card">
+       <div class="card-header"><i class="fas fa-person-fill">Register Form</i></div><br />
+  <div class="card-body">
+    <form action="/auth/register" method="POST">
+  <div class="form-group">
+    <label for="name"><i class="fas fa-pencil">Name</i></label>
+    <input type="text" class="form-control" id="name"  placeholder="name" name="name">
+  </div>
+  <div class="form-group">
+    <label for="email"><i class="fas fa-person-circle">Email Address</i></label>
+    <input type="email" class="form-control" id="email" placeholder="Enter your Email " name="email">
+  </div>
+  <div class="form-group">
+    <label for="password"><i class="fas fa-key">Password</i> </label>
+    <input type="password" class="form-control" id="password" placeholder="Enter your password "name="password">
+  </div>
+  <div class="form-group">
+    <label for="passwordConfirm"><i class="fas fa-key"> Confirm Password </i></label>
+    <input type="password" class="form-control" id="passwordConfirm" placeholder="Enter your passwordConfirm"name="passwordConfirm">
+  </div>
+  <button type="submit" class="btn btn-primary">Register User</button>
+</form>
+  </div>
+</div>
+{{#if message}}
+<h4 class="alert alert-danger mt-4">{{message}}</h4>
+{{/if}}
+   </div>
+   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  </body>
+</html>
